@@ -27,7 +27,7 @@ public class GameActivity extends AppCompatActivity implements Keys {
     private TextView tvMoney;
     private TextView tvRed1;
     private TextView tvRed2;
-    ProgressBar pbTimer;
+    private ProgressBar pbTimer;
     private Button b50;
     private Button bA;
     private Button bB;
@@ -120,7 +120,7 @@ public class GameActivity extends AppCompatActivity implements Keys {
 
     private void detectRightAnswer(Button selectedButton) {
         if (selectedButton.getText().toString().endsWith(rightAnswer)) {
-            selectedButton.setBackgroundColor(Color.parseColor("#FFEB3B"));
+            selectedButton.setBackgroundColor(Color.parseColor("#FF8BC34A"));
             setMoneyBalance();
             model.getLevels().remove(model.getLevels().size() - 1);
             if (model.getCounter() == model.getNumberLevels()) {
@@ -142,7 +142,7 @@ public class GameActivity extends AppCompatActivity implements Keys {
             selectedButton.setBackgroundColor(Color.parseColor("#FF0000"));
             for (Button button : buttons) {
                 if (button.getText().toString().endsWith(rightAnswer)) {
-                    button.setBackgroundColor(Color.parseColor("#FFEB3B"));
+                    button.setBackgroundColor(Color.parseColor("#FF8BC34A"));
                 }
             }
             tvInfo.setText("Wrong answer\nYOU LOSE\n\nGame over!");

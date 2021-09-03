@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements Keys {
             ArrayList<QuestionAndAnswers> list = gson.fromJson(jsonObject, new TypeToken<ArrayList<QuestionAndAnswers>>(){}.getType());
             model.setQuestionAndAnswersArrayList(list);
         }
+        model.shuffle();
         Intent intent = new Intent(this, GameActivity.class);
         intent.putExtra(KEY_MODEL, model);
         startActivity(intent);

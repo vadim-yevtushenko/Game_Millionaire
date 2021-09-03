@@ -23,7 +23,7 @@ public class ConnectActivity extends AppCompatActivity implements Keys{
     private Button bConnect;
     private Button bBack;
     private ProgressBar pbConnect;
-    TextView tvInfo2;
+    private TextView tvInfo2;
     private Socket socket;
     private String jsonObject;
 
@@ -33,8 +33,6 @@ public class ConnectActivity extends AppCompatActivity implements Keys{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connect);
-
-        Intent intent = getIntent();
 
         initViews();
 
